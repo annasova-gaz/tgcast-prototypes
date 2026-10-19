@@ -1,0 +1,1 @@
+import{d as s,e as t,o as l,w as r,J as n,O as p,u as c,bo as d}from"./entry.js";const _=s({__name:"DialogClose",props:{asChild:{type:Boolean},as:{}},setup(e){const o=e;return(a,i)=>(l(),t(c(d),p({"data-slot":"dialog-close"},o),{default:r(()=>[n(a.$slots,"default")]),_:3},16))}});export{_};

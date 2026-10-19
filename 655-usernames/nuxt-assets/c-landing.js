@@ -1,0 +1,1 @@
+import{d as e,j as a,o as n,h as s,u as t,a2 as o}from"./entry.js";const c={class:"landing-light-mode min-h-screen w-full bg-[#f8f9fc]"},f=e({__name:"landing",setup(r){return(l,_)=>(n(),a("div",c,[s(t(o))]))}});export{f as default};

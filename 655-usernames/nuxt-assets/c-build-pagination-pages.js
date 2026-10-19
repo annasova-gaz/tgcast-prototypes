@@ -1,0 +1,1 @@
+function r(f,i){if(i<=7)return Array.from({length:i},(n,u)=>u+1);const s=[1];f>3&&s.push("ellipsis");const p=Math.max(2,f-1),h=Math.min(i-1,f+1);for(let n=p;n<=h;n++)n!==1&&n!==i&&s.push(n);return f<i-3&&s.push("ellipsis"),i>1&&s.push(i),s}export{r as b};

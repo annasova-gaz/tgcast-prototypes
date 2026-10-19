@@ -1,0 +1,1 @@
+import{d as a,a0 as s,ao as n,V as r,X as c}from"./entry.js";const d=a({__name:"[code]",async setup(p){let o,t;const e=s().params.code;return e&&n(e),[o,t]=r(()=>c(`/?bonus=${encodeURIComponent(e)}`,{replace:!0})),await o,t(),()=>{}}});export{d as default};

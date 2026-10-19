@@ -1,0 +1,8 @@
+User-Agent: *
+Allow: /
+
+User-Agent: Yandex
+Allow: /
+
+Sitemap: https://tgcast.ru/sitemap.xml
+Sitemap: https://tgcast.ru/blog-sitemap.xml

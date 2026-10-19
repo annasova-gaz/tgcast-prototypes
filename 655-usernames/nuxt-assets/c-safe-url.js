@@ -1,0 +1,1 @@
+const i=new Set(["http:","https:","mailto:","tel:"]);function n(r){if(!r)return"#";const t=r.trim();if(t.startsWith("/")||t.startsWith("#"))return t;try{const e=new URL(t,"https://placeholder.invalid");return e.origin==="https://placeholder.invalid"||i.has(e.protocol)?t:"#"}catch{return"#"}}export{n as s};

@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Прототипы TGCast</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root { --bg:#f5f7ff; --card:#fff; --text:#252627; --muted:#696971; --border:#eff3ff; --accent:#3958f8; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#1e1e1e; --card:#252627; --text:#f5f5f6; --muted:#adadb3; --border:#3b3b3e; --accent:#adadb3; } }
+  * { box-sizing: border-box; }
+  body { margin:0; font-family: Manrope, system-ui, sans-serif; background:var(--bg); color:var(--text); font-size:16px; line-height:24px; }
+  main { max-width: 880px; margin: 0 auto; padding: 48px 16px 64px; }
+  h1 { font-size: 36px; line-height: 44px; margin: 0 0 8px; font-weight: 700; }
+  .lead { color: var(--muted); margin: 0 0 32px; }
+  .list { display: flex; flex-direction: column; gap: 12px; }
+  a.item { display: flex; gap: 16px; align-items: center; justify-content: space-between; padding: 20px 24px; background: var(--card); border: 1.5px solid var(--border); border-radius: 16px; color: inherit; text-decoration: none; }
+  a.item:hover { border-color: #dbe2fe; }
+  a.item:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .t { font-weight: 600; font-size: 20px; line-height: 28px; margin: 0; }
+  .d { color: var(--muted); margin: 4px 0 0; }
+  .meta { color: var(--muted); font-size: 14px; line-height: 20px; white-space: nowrap; }
+  footer { margin-top: 40px; color: var(--muted); font-size: 14px; line-height: 20px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Прототипы TGCast</h1>
+  <p class="lead">Кликабельные прототипы дизайн-задач. Данные выдуманные, бэкенда нет — всё работает прямо в браузере.</p>
+  <div class="list">
+    <a class="item" href="./655-usernames/index.html#/catalog">
+      <div>
+        <p class="t">Несколько юзернеймов канала</p>
+        <p class="d">TGCASTDEV-655 · «+N» и меню остальных юзернеймов: таблица и карточки каталога, быстрый поиск, «Предложить канал», шапка канала</p>
+      </div>
+      <span class="meta">19.10.2026</span>
+    </a>
+  </div>
+  <footer>Что где смотреть — в плашке «Прототип» в правом нижнем углу каждого прототипа.</footer>
+</main>
+</body>
+</html>

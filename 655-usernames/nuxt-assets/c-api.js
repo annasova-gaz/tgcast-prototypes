@@ -1,0 +1,1 @@
+import{bI as t,bJ as o}from"./entry.js";async function s(){const a=await $fetch("/api/payments/tariffs");return t.parse(a).map(o)}async function e(a){return await $fetch("/api/payments/promo",{method:"POST",body:{code:a}})}export{e as a,s as g};
