@@ -11,7 +11,7 @@
   --accent:#3958F8; --accent-soft:#E9EDFF; --ok:#1B7A37; --warn:#9A5800; --bad:#B61630;
   /* продуктовые токены карточки */
   --c-bg:#FFFFFF; --c-border:#EFF3FF; --c-text:#252627; --c-sec:#696971; --c-ic:#3B3B3E; --c-badge:#F5F5F6;
-  --c-up:#1EA612; --c-down:#B61630; --c-verified:#3958F8; --c-tabs:#EFF3FF; --c-tab-on:#FFFFFF; --c-hover:#F5F7FF;
+  --c-up:#1EA612; --c-down:#B61630; --c-up-bg:#F1FEF3; --c-up-text:#086E00; --c-verified:#3958F8; --c-tabs:#EFF3FF; --c-tab-on:#FFFFFF; --c-hover:#F5F7FF;
   --f:"Manrope",-apple-system,"Segoe UI",sans-serif;
   color-scheme:light;
 }
@@ -19,12 +19,12 @@
   --page:#151619; --panel:#1E1F23; --line:#2E3036; --ink:#ECEDF0; --muted:#A3A5B0; --soft:#26272C;
   --accent:#7F98FF; --accent-soft:#232B4D; --ok:#4CD07A; --warn:#F2B84B; --bad:#FF7A8A;
   --c-bg:#252627; --c-border:#1E1E1E; --c-text:#E6E6E7; --c-sec:#9D9DA6; --c-ic:#CFCFD2; --c-badge:#434347;
-  --c-up:#5FD35A; --c-down:#F7BBC4; --c-verified:#5C81FC; --c-tabs:#1E1E1E; --c-tab-on:#434347; --c-hover:#2C2D31; color-scheme:dark}}
+  --c-up:#5FD35A; --c-down:#F7BBC4; --c-up-bg:#043700; --c-up-text:#9FE299; --c-verified:#5C81FC; --c-tabs:#1E1E1E; --c-tab-on:#434347; --c-hover:#2C2D31; color-scheme:dark}}
 :root[data-theme="dark"]{
   --page:#151619; --panel:#1E1F23; --line:#2E3036; --ink:#ECEDF0; --muted:#A3A5B0; --soft:#26272C;
   --accent:#7F98FF; --accent-soft:#232B4D; --ok:#4CD07A; --warn:#F2B84B; --bad:#FF7A8A;
   --c-bg:#252627; --c-border:#1E1E1E; --c-text:#E6E6E7; --c-sec:#9D9DA6; --c-ic:#CFCFD2; --c-badge:#434347;
-  --c-up:#5FD35A; --c-down:#F7BBC4; --c-verified:#5C81FC; --c-tabs:#1E1E1E; --c-tab-on:#434347; --c-hover:#2C2D31; color-scheme:dark}
+  --c-up:#5FD35A; --c-down:#F7BBC4; --c-up-bg:#043700; --c-up-text:#9FE299; --c-verified:#5C81FC; --c-tabs:#1E1E1E; --c-tab-on:#434347; --c-hover:#2C2D31; color-scheme:dark}
 *{box-sizing:border-box}
 [hidden]{display:none!important}
 body{background:var(--page);color:var(--ink);font-family:var(--f);font-size:16px;line-height:24px;-webkit-font-smoothing:antialiased}
@@ -151,6 +151,35 @@ textarea:focus{border-color:var(--accent);outline:none}
 @media (hover:none){.swap .s1{opacity:0}.swap .s2{opacity:1}}
 .mini{display:flex;flex-direction:column} .mini .mid{font-size:14px}
 
+
+/* раунд 2 */
+.ic{display:inline-grid;place-items:center;width:16px;height:16px;flex:none;color:var(--c-sec)} .ic svg{width:16px;height:16px}
+.sl{display:inline-flex;align-items:center;gap:4px}.sl .ic{width:20px;height:20px}.sl .ic svg{width:20px;height:20px}
+.b36{font-size:36px;line-height:44px;font-weight:600;letter-spacing:-.01em}
+.gb{display:inline-flex;align-items:center;gap:2px;height:24px;padding:0 6px;border-radius:8px;background:var(--c-up-bg);color:var(--c-up-text);font-size:16px;line-height:20px;font-weight:600;white-space:nowrap;font-variant-numeric:tabular-nums}
+.gb svg{width:16px;height:16px}
+.g-cap{font-size:12px;line-height:20px;font-weight:600;color:var(--c-sec)}
+.m22{display:grid;grid-template-columns:1fr 1fr;width:160px;flex:none}
+.m22>div{display:flex;flex-direction:column;padding:8px 8px 8px 12px}
+.m22>div:nth-child(odd){border-right:1px solid var(--c-border)} .m22>div:nth-child(-n+2){border-bottom:1px solid var(--c-border)}
+.ml{display:flex;align-items:center;height:20px;font-size:12px;line-height:20px;font-weight:600;color:var(--c-sec)}
+.mv{font-size:16px;line-height:20px;font-weight:600;white-space:nowrap}
+.strip{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--c-border)}
+.strip>div{display:flex;flex-direction:column;padding:8px 8px 10px 16px}.strip>div+div{border-left:1px solid var(--c-border);padding-left:12px}
+.chips2{display:flex;flex-wrap:wrap;gap:4px}
+.chip2{display:inline-flex;align-items:center;gap:4px;height:28px;padding:0 10px;border-radius:8px;background:var(--c-badge);color:var(--c-text);font-size:14px;line-height:20px;font-weight:600;white-space:nowrap;font-variant-numeric:tabular-nums}
+.chip2 .k{color:var(--c-sec);font-size:12px}
+.chip2.main{font-size:16px} .chip2.main .ic{color:var(--c-text)}
+.chip2.up{background:var(--c-up-bg);color:var(--c-up-text)} .chip2.up .ic{color:var(--c-up-text)}
+.inl{display:flex;flex-wrap:wrap;gap:4px 16px;font-size:14px;line-height:20px}
+.inl>span{display:inline-flex;align-items:center;gap:4px;white-space:nowrap}
+.inl i{font-style:normal;font-size:12px;font-weight:600;color:var(--c-sec)} .inl b{font-weight:600;font-variant-numeric:tabular-nums}
+.gtxt{color:var(--c-up-text);font-weight:600}.gtxt .ic{color:var(--c-up-text)}
+.phone{width:358px;max-width:100%}.phone .tc{width:100%}
+.var.r2{grid-template-columns:minmax(0,1fr)!important}
+.r2-bot{display:grid;grid-template-columns:auto minmax(0,1fr) minmax(0,1fr);gap:24px;align-items:start}
+.phone-st{padding:16px}
+@media (max-width:1100px){.r2-bot{grid-template-columns:1fr}}
 /* тултип */
 [data-tip]{position:relative}
 [data-tip]:hover::after,[data-tip]:focus-visible::after{content:attr(data-tip);position:absolute;left:50%;bottom:calc(100% + 6px);transform:translateX(-50%);z-index:20;background:var(--ink);color:var(--page);font-size:12px;line-height:16px;font-weight:600;padding:6px 8px;border-radius:8px;white-space:pre;pointer-events:none;letter-spacing:0;text-transform:none}
@@ -159,16 +188,21 @@ textarea:focus{border-color:var(--accent);outline:none}
 
 <div class="wrap" lang="ru">
   <header class="lead">
-    <h1>Карточка канала — 10 компоновок</h1>
+    <h1>Карточка канала — компоновки</h1>
     <p class="muted">Сейчас карточка каталога не показывает ER и AR, а таблица показывает. Ниже 10 способов уместить все данные канала. В каждом варианте три карточки из демобазы, как ряд каталога: Cat Club (три юзернейма), «Автоподбор без прикрас» (длинное название, ER нет в данных) и «На позитиве · пилатес» (один юзернейм). Ширина карточек — как в каталоге при трёх в ряд на 1440.</p>
     <div class="facts">
       <span class="fact"><b>Данные:</b> база «TGCast: эталонные демоданные»</span>
       <span class="fact"><b>Из базы нет:</b> AR и прирост по дням — вписал Claude, на проверке у ChatGPT</span>
       <span class="fact"><b>Уже учтено:</b> «+N» у юзернейма без подложки, категории — бейджем, тултипы на обрезанном и на сокращённых числах</span>
     </div>
-    <nav class="nav" aria-label="Разделы"><a href="#refs">Референсы · 14</a><a href="#vars">Варианты · 10</a></nav>
+    <nav class="nav" aria-label="Разделы"><a href="#round2">Раунд 2 · 4 варианта</a><a href="#vars">Раунд 1 · 10 вариантов</a><a href="#refs">Референсы · 14</a></nav>
     <p class="small muted" id="store-state">Комментарии сохраняются автоматически, Claude их прочитает.</p>
   </header>
+
+  <section class="block" id="round2">
+    <div class="sec-h"><h2>Раунд 2 — доработка по твоим комментариям</h2><span class="small muted">Варианты 01, 02, 04 и новый по R04 Contra. Каждый — ряд на десктопе и карточка на телефоне.</span></div>
+    <div class="vars" id="r2-list"></div>
+  </section>
 
   <section class="block" id="refs">
     <div class="sec-h"><h2>Референсы</h2><span class="small muted">Screen Gallery → Mobbin → веб. Отметь, что берём, и напиши, что зацепило.</span></div>
@@ -176,7 +210,7 @@ textarea:focus{border-color:var(--accent);outline:none}
   </section>
 
   <section class="block" id="vars">
-    <div class="sec-h"><h2>Варианты</h2><span class="small muted">Наведи на числа и обрезанные названия — там тултипы. В вариантах 03, 08 и 10 карточки интерактивные.</span></div>
+    <div class="sec-h"><h2>Раунд 1 — 10 вариантов</h2><span class="small muted">Наведи на числа и обрезанные названия — там тултипы. В вариантах 03, 08 и 10 карточки интерактивные.</span></div>
     <div class="vars" id="var-list"></div>
   </section>
 </div>
@@ -314,11 +348,53 @@ function renderRefs(){document.getElementById("ref-list").innerHTML=REFS.map(r=>
  <div class="ref-t">${esc(r.title)}</div><p class="small">${esc(r.pattern)}</p>
  <div class="pm"><div><h4 class="y">Взять</h4><ul>${r.take.map(x=>`<li>${esc(x)}</li>`).join("")}</ul></div><div><h4 class="n">Не брать</h4><ul>${r.avoid.map(x=>`<li>${esc(x)}</li>`).join("")}</ul></div></div>
  <a class="small" href="${esc(r.link)}" target="_blank" rel="noopener" style="color:var(--accent);font-weight:600">Открыть экран ↗</a>${noteHTML(r.id,"Что зацепило или почему не то")}</div></article>`).join("")}
+// ===== Раунд 2 (20.10, по комментариям Леры) =====
+// Числа — по Notion «Правила отображения чисел и дат»: до 999 полностью; K/M латиницей, точка; 10K–99.9K — 1 знак; 100K–999K — без дроби; от 1M — 1 знак; без «.0». Проценты — запятая. Нет данных — «–».
+const ab=n=>{const a=Math.abs(n),s=n<0?"−":"";if(a<1000)return s+a;if(a>=1e6)return s+(a/1e6).toFixed(1).replace(/\.0$/,"")+"M";if(a>=1e5)return s+Math.round(a/1e3)+"K";return s+(a/1e3).toFixed(1).replace(/\.0$/,"")+"K";};
+const DI={ // иконки ДС из прод-кода: general/users 16, views, arrow-up-right
+ users:'<svg viewBox="0 0 16 16" fill="none"><path d="M9.80644 11.3478C9.80644 11.2557 9.70524 10.9521 9.05422 10.6292C8.45681 10.3331 7.5835 10.1298 6.5825 10.1298C5.58148 10.1298 4.70819 10.3331 4.11077 10.6292C3.45973 10.9521 3.35855 11.2557 3.35855 11.3478C3.35857 11.5454 3.44889 11.8171 3.92508 12.0794C4.42382 12.3541 5.27516 12.5658 6.5825 12.5658C7.88985 12.5658 8.74118 12.3541 9.23991 12.0794C9.7161 11.8171 9.80642 11.5454 9.80644 11.3478ZM13.6415 10.6623C13.6415 10.4367 13.5184 10.1583 13.1772 9.90665C12.8382 9.65665 12.3335 9.47835 11.7438 9.4783C11.3689 9.4783 11.0647 9.15778 11.0646 8.76171C11.0646 8.36551 11.3688 8.04413 11.7438 8.04413C12.5772 8.04418 13.3614 8.29191 13.955 8.72969C14.5464 9.16585 15 9.83832 15 10.6623C14.9999 11.2663 14.8077 11.8533 14.3851 12.3216C13.9686 12.7832 13.3765 13.0767 12.6571 13.2043C12.2873 13.27 11.9367 13.0066 11.8746 12.6159C11.8125 12.2253 12.062 11.855 12.4316 11.7892C12.942 11.6986 13.2386 11.5137 13.4027 11.3318C13.5605 11.1568 13.6414 10.9357 13.6415 10.6623ZM7.34419 5.37694C7.3441 5.03239 7.23407 4.8095 7.10071 4.67237C6.96302 4.53089 6.75521 4.43517 6.48965 4.43517C6.22424 4.43521 6.01721 4.53099 5.87954 4.67237C5.74609 4.80948 5.63615 5.0322 5.63606 5.37694C5.63606 6.06795 6.06212 6.43673 6.48965 6.43681C6.91723 6.43681 7.34419 6.06803 7.34419 5.37694ZM11.5487 5.50105C11.5487 5.266 11.3689 5.07585 11.147 5.0757C10.9249 5.0757 10.7444 5.26591 10.7444 5.50105C10.7445 5.73607 10.925 5.92639 11.147 5.92639C11.3689 5.92625 11.5486 5.73598 11.5487 5.50105ZM11.165 11.3478C11.165 12.2189 10.6633 12.9145 9.86802 13.3525C9.09525 13.778 7.99527 14 6.5825 14C5.16972 14 4.06974 13.778 3.29697 13.3525C2.50173 12.9145 2.00003 12.2189 2 11.3478C2 10.3714 2.77249 9.70765 3.53381 9.33018C4.34908 8.92602 5.42782 8.69566 6.5825 8.69566C7.73716 8.69566 8.81591 8.92602 9.63118 9.33018C10.3925 9.70765 11.165 10.3714 11.165 11.3478ZM12.9072 5.50105C12.9071 6.52801 12.1193 7.36042 11.147 7.36057C10.1746 7.36057 9.38593 6.5281 9.3858 5.50105C9.3858 4.47388 10.1745 3.64052 11.147 3.64052C12.1194 3.64067 12.9072 4.47397 12.9072 5.50105ZM8.70179 5.37694C8.70179 6.7638 7.75565 7.87199 6.48965 7.87199C5.22373 7.8719 4.27751 6.76374 4.27751 5.37694C4.27761 4.68315 4.51082 4.07642 4.93215 3.64353C5.34935 3.2149 5.90849 3.00004 6.48965 3C7.07079 3 7.62994 3.21497 8.04715 3.64353C8.46848 4.07642 8.70169 4.68315 8.70179 5.37694Z" fill="currentColor"/></svg>',
+ eye:'<svg viewBox="0 0 24 24" fill="none"><path d="M2 12C3.8 8.6 7.6 6 12 6s8.2 2.6 10 6c-1.8 3.4-5.6 6-10 6S3.8 15.4 2 12Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2"/></svg>',
+ up:'<svg viewBox="0 0 12 12" fill="none"><path d="M4.22901 3.54028L8.49001 3.54022M8.49001 3.54022L8.49001 7.74061M8.49001 3.54022L3.54026 8.48997" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/></svg>'
+};
+const DEF2={subs:n=>`${full(n)} подписчиков`,reach:n=>`Средний охват поста: ${full(n)}`,err:"ERR — средний охват поста / подписчики ×100%",er:"ER — вовлечённость: реакции, комментарии и репосты / охват",ar:"AR — коэффициент рекламности: доля постов с упоминаниями других каналов за 90 дней",g7:n=>`Прирост за 7 дней: +${full(n)}`};
+const pv=(c,k)=>c[k]==null?`<span class="nd" data-tip="Метрика недоступна: у канала скрыты реакции">–</span>`:`<span class="num">${pct(c[k])}</span>`;
+const growBadge=c=>`<span class="gb" data-tip="${DEF2.g7(c.g7)}">${DI.up}+${ab(c.g7)}</span>`;
+const subsLine=(c,sz)=>`<span class="sl" data-tip="${DEF2.subs(c.subs)}"><span class="ic">${DI.users}</span><span class="num ${sz}">${ab(c.subs)}</span></span>`;
+const W=[
+{id:"w01",from:"01",t:"База + 2×2, прирост под числом",
+ card:c=>`<article class="tc"><div class="tc-top">${head(c)+cats(c)+about(c)}</div><div class="mt">
+  <div class="kv" style="flex:1;justify-content:center;gap:2px">${subsLine(c,"b36")}<span>${growBadge(c)} <span class="g-cap">за 7 дн.</span></span></div><div class="vline"></div>
+  <div class="m22">${[["reach",`<span class="ic">${DI.eye}</span>`,`<span class="num" data-tip="${DEF2.reach(c.reach)}">${ab(c.reach)}</span>`],["err","ERR",pv(c,"err")],["er","ER",pv(c,"er")],["ar","AR",pv(c,"ar")]].map(([k,l,v])=>`<div><span class="ml" ${k==="reach"?"":`data-tip="${DEF2[k]}"`}>${l}</span><span class="mv">${v}</span></div>`).join("")}</div></div></article>`,
+ did:["Прирост переехал под подписчиков — больше не наезжает на правую колонку","Все значения справа одним размером 16/20, подписи одним стилем 12/20","Иконки подписчиков и охвата — из ДС (как в проде)","Числа по правилам из Notion: 241K, 1.2M, 107K"],
+ left:["Правая колонка 160 px: самое длинное возможное значение «100,0%» встаёт впритык — если ER бывает трёхзначным, колонку надо расширять до 176"]},
+{id:"w02",from:"02",t:"Полоса метрик, без слова «Подписчики»",
+ card:c=>`<article class="tc"><div class="tc-top">${head(c)+cats(c)+about(c)}</div><div class="mt" style="flex-direction:column">
+  <div style="display:flex;align-items:center;gap:8px;padding:12px 16px 8px">${subsLine(c,"b36")}${growBadge(c)}</div>
+  <div class="strip">${[["reach",`<span class="ic">${DI.eye}</span>`,`<span class="num" data-tip="${DEF2.reach(c.reach)}">${ab(c.reach)}</span>`],["err","ERR",pv(c,"err")],["er","ER",pv(c,"er")],["ar","AR",pv(c,"ar")]].map(([k,l,v])=>`<div><span class="ml" ${k==="reach"?"":`data-tip="${DEF2[k]}"`}>${l}</span><span class="mv">${v}</span></div>`).join("")}</div></div></article>`,
+ did:["Слово «Подписчики» убрано, иконка ДС стоит перед числом — минус строка 20 px","Прирост на зелёной плашке тем же размером 16, что и ERR / ER","Три размера шрифта на всю нижнюю часть: 36 число, 16 значения, 12 подписи","Отступы по сетке 4: внутри полосы 8/16, между зонами линия"],
+ left:["Карточка всё ещё выше текущей на ~36 px — цена за ER и AR"]},
+{id:"w03",from:"04",t:"Бейджи метрик вместо большого числа",
+ card:c=>`<article class="tc"><div class="tc-top">${head(c)+cats(c)+about(c)}</div><div class="mt" style="flex-direction:column;padding:12px 16px 16px;gap:8px">
+  <div class="chips2">${`<span class="chip2 main" data-tip="${DEF2.subs(c.subs)}"><span class="ic">${DI.users}</span>${ab(c.subs)}</span>`}<span class="chip2 up" data-tip="${DEF2.g7(c.g7)}"><span class="ic">${DI.up}</span>+${ab(c.g7)} · 7 дн.</span><span class="chip2" data-tip="${DEF2.reach(c.reach)}"><span class="ic">${DI.eye}</span>${ab(c.reach)}</span></div>
+  <div class="chips2"><span class="chip2" data-tip="${DEF2.err}"><span class="k">ERR</span>${c.err==null?"–":pct(c.err)}</span><span class="chip2" data-tip="${c.er==null?"Метрика недоступна: у канала скрыты реакции":DEF2.er}"><span class="k">ER</span>${c.er==null?"–":pct(c.er)}</span><span class="chip2" data-tip="${DEF2.ar}"><span class="k">AR</span>${c.ar==null?"–":pct(c.ar)}</span></div></div></article>`,
+ did:["График убран, бейджи встали на место большого числа","Подписчики — первый бейдж, тёмным текстом и иконкой ДС; прирост — зелёным «+4.3K · 7 дн.»; охват — с иконкой глаза","Два ряда: аудитория (подписчики, прирост, охват) и коэффициенты (ERR, ER, AR)"],
+ left:["Главное число стало того же размера, что остальные — иерархию держит только порядок и цвет. Проверь, хватает ли этого","Самая низкая из всех вариантов"]},
+{id:"w04",from:"R04",t:"Метрики строкой под названием (как Contra)",
+ card:c=>`<article class="tc"><div class="tc-top">${head(c)}
+  <div class="inl">${`<span data-tip="${DEF2.subs(c.subs)}"><span class="ic">${DI.users}</span><b>${ab(c.subs)}</b></span>`}<span class="gtxt" data-tip="${DEF2.g7(c.g7)}"><span class="ic">${DI.up}</span>${ab(c.g7)}</span><span data-tip="${DEF2.reach(c.reach)}"><span class="ic">${DI.eye}</span><b>${ab(c.reach)}</b></span></div>
+  <div class="inl"><span data-tip="${DEF2.err}"><i>ERR</i><b>${c.err==null?"–":pct(c.err)}</b></span><span data-tip="${c.er==null?"Метрика недоступна":DEF2.er}"><i>ER</i><b>${c.er==null?"–":pct(c.er)}</b></span><span data-tip="${DEF2.ar}"><i>AR</i><b>${c.ar==null?"–":pct(c.ar)}</b></span></div>
+  ${cats(c)+about(c)}</div></article>`,
+ did:["Метрики сразу под шапкой, сокращёнными числами","Подписи решены так: у подписчиков, прироста и охвата — иконки, у коэффициентов — короткая серая подпись перед значением","Нижней зоны с линиями нет — карточка ниже всех, кроме 03"],
+ left:["Пять значений в двух строках одного веса: подписчики выделены только жирностью","На 344 px первая строка помещается до ~1.2M · 99.9K · 999K, длиннее — перенос"]}
+];
+function renderR2(){const el=document.getElementById("r2-list");if(!el)return;el.innerHTML=W.map((v,ix)=>`<article class="var r2" id="${v.id}"><div class="var-h"><span class="vid">${v.from==="R04"?"Новый":"Было "+v.from}</span><h3>${esc(v.t)}</h3><span class="small muted">десктоп — 3 в ряд на 1440, справа ниже — телефон 390</span></div>
+ <div class="stage">${CH.map(c=>v.card(c)).join("")}</div>
+ <div class="r2-bot"><div class="stage phone-st"><div class="phone">${v.card(CH[1])}</div></div><div class="why"><h4>Что поменяла</h4><ul>${v.did.map(x=>`<li>${esc(x)}</li>`).join("")}</ul><h4>Что осталось спорным</h4><ul>${v.left.map(x=>`<li>${esc(x)}</li>`).join("")}</ul></div>${noteHTML(v.id,"Что нравится, что поменять")}</div></article>`).join("");}
 function renderVars(){document.getElementById("var-list").innerHTML=V.map((v,ix)=>`<article class="var" id="${v.id}"><div style="display:grid;gap:12px;min-width:0"><div class="var-h"><span class="vid">${String(ix+1).padStart(2,"0")}</span><h3>${esc(v.t)}</h3><span class="small muted">${esc(v.refs)}</span></div>
  <div class="stage">${(v.single?CH:CH).map((c,i)=>v.card(c,i)).join("")}</div></div>
  <aside class="side"><div class="why"><h4>Комментарий Claude</h4><div><b class="small">Плюсы</b><ul>${v.plus.map(x=>`<li>${esc(x)}</li>`).join("")}</ul></div><div><b class="small">Минусы</b><ul>${v.minus.map(x=>`<li>${esc(x)}</li>`).join("")}</ul></div><p><b>Мобильный:</b> ${esc(v.mob)}</p>${v.rec?`<p class="rec">${esc(v.rec)}</p>`:""}</div>${noteHTML(v.id,"Что нравится, что поменять, с чем совместить")}</aside></article>`).join("")}
 function fit(){document.querySelectorAll("[data-fit]").forEach(e=>{const over=e.scrollWidth>e.clientWidth+1;e.classList.toggle("fit",!over);if(!over)e.removeAttribute("data-tip");});}
-function renderAll(){const a=document.activeElement,fid=a&&a.tagName==="TEXTAREA"?a.id:null,pos=fid?a.selectionStart:0;renderRefs();renderVars();fit();if(fid){const t=document.getElementById(fid);if(t){t.focus();try{t.selectionStart=t.selectionEnd=pos}catch(_){}}}}
+function renderAll(){const a=document.activeElement,fid=a&&a.tagName==="TEXTAREA"?a.id:null,pos=fid?a.selectionStart:0;renderR2();renderRefs();renderVars();fit();if(fid){const t=document.getElementById(fid);if(t){t.focus();try{t.selectionStart=t.selectionEnd=pos}catch(_){}}}}
 // интерактив карточек
 document.addEventListener("click",e=>{
  const tab=e.target.closest("[data-tab]");if(tab){const j=tab.dataset.tab;document.querySelectorAll("[data-tabs]").forEach(card=>{card.querySelectorAll("[data-tab]").forEach(b=>b.setAttribute("aria-selected",b.dataset.tab===j));card.querySelectorAll("[data-pane]").forEach(p=>p.hidden=p.dataset.pane!==j);});return;}
@@ -335,7 +411,7 @@ renderAll();
 (async()=>{try{db=await window.claude?.use?.("db");}catch(_){db=null}
  const st=document.getElementById("store-state");
  if(!db){st.textContent="Хранилище недоступно в этом просмотре: комментарии останутся только в этом браузере. Открой страницу в claude.ai.";
-  REFS.concat(V).forEach(x=>{try{const v=localStorage.getItem("cv-"+x.id);if(v)notes[x.id]={...(notes[x.id]||{}),text:v}}catch(_){}});renderAll();return;}
+  REFS.concat(V,W).forEach(x=>{try{const v=localStorage.getItem("cv-"+x.id);if(v)notes[x.id]={...(notes[x.id]||{}),text:v}}catch(_){}});renderAll();return;}
  try{const user=await window.claude.use("user");const w=user?await user.can("data.write"):null;canWrite=w===null?true:!!w;}catch(_){}
  if(!canWrite)st.textContent="У тебя доступ только на просмотр: оценки и комментарии видны, но не меняются.";
  let first=true;db.collection("notes").onSnapshot(q=>{q.docs.forEach(d=>{const a=document.activeElement;const mine=a&&a.dataset&&a.dataset.id===d.id&&a.tagName==="TEXTAREA";const v=d.data();notes[d.id]=mine?{...v,text:notes[d.id]?.text??v.text}:v;});
