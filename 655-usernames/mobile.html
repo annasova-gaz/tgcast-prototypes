@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>655 · мобильный</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root { --bg:#f5f7ff; --card:#fff; --text:#252627; --muted:#696971; --border:#dbe2fe; --chip:#eff3ff; }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bg:#1e1e1e; --card:#252627; --text:#f5f5f6; --muted:#adadb3; --border:#3b3b3e; --chip:#3b3b3e; } }
+  :root[data-theme="dark"] { --bg:#1e1e1e; --card:#252627; --text:#f5f5f6; --muted:#adadb3; --border:#3b3b3e; --chip:#3b3b3e; }
+  * { box-sizing: border-box; }
+  body { margin:0; font-family: Manrope, system-ui, sans-serif; background:var(--bg); color:var(--text); font-size:16px; line-height:24px; }
+  main { max-width: 1000px; margin: 0 auto; padding: 32px 16px 48px; }
+  h1 { font-size: 28px; line-height: 36px; margin: 0 0 8px; font-weight: 700; }
+  .lead { color: var(--muted); margin: 0 0 24px; max-width: 640px; }
+  .phones { display: flex; flex-wrap: wrap; gap: 32px; justify-content: center; }
+  .phone { display: flex; flex-direction: column; gap: 12px; align-items: center; }
+  .label { font-weight: 600; }
+  .hint { color: var(--muted); font-size: 14px; line-height: 20px; max-width: 390px; text-align: center; margin: 0; }
+  .shell { width: 414px; max-width: calc(100vw - 32px); padding: 12px; border-radius: 48px; background: var(--card); border: 1.5px solid var(--border); }
+  iframe { display: block; width: 100%; height: 844px; max-height: 80vh; border: 0; border-radius: 36px; background: #fff; }
+  .links { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; }
+  a.chip { padding: 4px 12px; border-radius: 8px; background: var(--chip); color: inherit; text-decoration: none; font-size: 14px; line-height: 24px; }
+  a.chip:focus-visible { outline: 2px solid var(--text); outline-offset: 2px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Мобильный · несколько юзернеймов</h1>
+  <p class="lead">Ширина экрана 390. В карточках каталога и в поиске «+N» — просто бейдж, тап по нему открывает канал, как по любому месту карточки. В шапке канала тап по «+N» открывает шторку со всеми юзернеймами.</p>
+  <div class="phones">
+    <div class="phone">
+      <span class="label">Каталог</span>
+      <div class="shell"><iframe title="Каталог, мобильный" src="index.html#/catalog" loading="lazy"></iframe></div>
+      <p class="hint">«Телега» +2, «Крипто-новости» +19. Поиск — лупа сверху.</p>
+    </div>
+    <div class="phone">
+      <span class="label">Шапка канала</span>
+      <div class="shell"><iframe title="Шапка канала, мобильный" src="index.html#/channels/@telegaru" loading="lazy"></iframe></div>
+      <p class="hint">Тап по «+2» рядом с @telegaru — шторка «Юзернеймы канала».</p>
+    </div>
+  </div>
+  <p class="hint" style="margin:24px auto 0">Открыть отдельно: <a href="index.html#/catalog">каталог</a> · <a href="index.html#/channels/@telegaru">шапка канала</a> · на телефоне откроется как есть.</p>
+</main>
+</body>
+</html>
