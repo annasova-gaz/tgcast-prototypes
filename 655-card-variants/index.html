@@ -1,0 +1,344 @@
+<meta name="robots" content="noindex, nofollow"><title>655 · Карточка канала — 10 вариантов</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: шапка-объяснение → референсы (снимок слева, разбор и поле справа, 2 колонки на широком) → 10 вариантов: карточки в реальном размере слева, комментарий Claude и поле Леры справа.
+   Карточки — токены TGCast (Manrope, синий акцент, surface/subtle бейджи); обвязка страницы нейтральная, чтобы не спорить с карточками. */
+:root{
+  --page:#F3F5FB; --panel:#FFFFFF; --line:#E3E7F2; --ink:#1F2024; --muted:#5F6170; --soft:#EEF1F8;
+  --accent:#3958F8; --accent-soft:#E9EDFF; --ok:#1B7A37; --warn:#9A5800; --bad:#B61630;
+  /* продуктовые токены карточки */
+  --c-bg:#FFFFFF; --c-border:#EFF3FF; --c-text:#252627; --c-sec:#696971; --c-ic:#3B3B3E; --c-badge:#F5F5F6;
+  --c-up:#1EA612; --c-down:#B61630; --c-verified:#3958F8; --c-tabs:#EFF3FF; --c-tab-on:#FFFFFF; --c-hover:#F5F7FF;
+  --f:"Manrope",-apple-system,"Segoe UI",sans-serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --page:#151619; --panel:#1E1F23; --line:#2E3036; --ink:#ECEDF0; --muted:#A3A5B0; --soft:#26272C;
+  --accent:#7F98FF; --accent-soft:#232B4D; --ok:#4CD07A; --warn:#F2B84B; --bad:#FF7A8A;
+  --c-bg:#252627; --c-border:#1E1E1E; --c-text:#E6E6E7; --c-sec:#9D9DA6; --c-ic:#CFCFD2; --c-badge:#434347;
+  --c-up:#5FD35A; --c-down:#F7BBC4; --c-verified:#5C81FC; --c-tabs:#1E1E1E; --c-tab-on:#434347; --c-hover:#2C2D31; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --page:#151619; --panel:#1E1F23; --line:#2E3036; --ink:#ECEDF0; --muted:#A3A5B0; --soft:#26272C;
+  --accent:#7F98FF; --accent-soft:#232B4D; --ok:#4CD07A; --warn:#F2B84B; --bad:#FF7A8A;
+  --c-bg:#252627; --c-border:#1E1E1E; --c-text:#E6E6E7; --c-sec:#9D9DA6; --c-ic:#CFCFD2; --c-badge:#434347;
+  --c-up:#5FD35A; --c-down:#F7BBC4; --c-verified:#5C81FC; --c-tabs:#1E1E1E; --c-tab-on:#434347; --c-hover:#2C2D31; color-scheme:dark}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+body{background:var(--page);color:var(--ink);font-family:var(--f);font-size:16px;line-height:24px;-webkit-font-smoothing:antialiased}
+.wrap{padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:24px 64px;display:grid;gap:32px}
+h1,h2,h3{margin:0;text-wrap:balance}
+h1{font-size:32px;line-height:40px;font-weight:700;letter-spacing:-.01em}
+h2{font-size:24px;line-height:32px;font-weight:700}
+h3{font-size:18px;line-height:24px;font-weight:700}
+p{margin:0}
+.muted{color:var(--muted)} .small{font-size:14px;line-height:20px}
+.lead{max-width:880px;display:grid;gap:8px}
+.facts{display:flex;flex-wrap:wrap;gap:8px}
+.fact{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:8px 12px;font-size:14px;line-height:20px}
+.fact b{font-weight:700}
+.nav{display:flex;gap:8px;flex-wrap:wrap}
+.nav a{color:var(--accent);font-weight:600;font-size:14px;text-decoration:none;padding:6px 12px;border-radius:999px;background:var(--accent-soft)}
+.nav a:focus-visible,button:focus-visible,textarea:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+section.block{display:grid;gap:16px}
+.sec-h{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap}
+
+/* референсы */
+.refs{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,600px),1fr));gap:16px}
+.ref{background:var(--panel);border:1px solid var(--line);border-radius:16px;display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);overflow:hidden}
+.ref-img{background:var(--soft);display:grid;place-items:center;padding:12px;min-height:200px}
+.ref-img img{max-height:420px;width:auto;max-width:100%;border-radius:8px;display:block}
+.ref-img .none{color:var(--muted);font-size:14px;text-align:center}
+.ref-b{padding:16px 20px;display:grid;gap:10px;align-content:start;min-width:0}
+.ref-t{font-weight:700;font-size:16px;line-height:22px}
+.meta{font-size:13px;line-height:18px;color:var(--muted);display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.pill{display:inline-block;font-size:12px;line-height:18px;font-weight:700;padding:1px 8px;border-radius:999px;background:var(--soft);color:var(--muted)}
+.pill.acc{background:var(--accent-soft);color:var(--accent)}
+.pm{display:grid;grid-template-columns:1fr;gap:8px}
+.pm h4{margin:0 0 2px;font-size:12px;line-height:16px;text-transform:uppercase;letter-spacing:.05em}
+.pm .y{color:var(--ok)} .pm .n{color:var(--warn)}
+.pm ul{margin:0;padding-left:18px;font-size:14px;line-height:20px;display:grid;gap:4px}
+@media (max-width:760px){.ref{grid-template-columns:1fr}.pm{grid-template-columns:1fr}}
+
+/* поле Леры */
+.note{display:grid;gap:8px}
+.verdict{display:flex;gap:6px;flex-wrap:wrap}
+.verdict button{font:inherit;font-size:13px;line-height:20px;font-weight:600;padding:4px 12px;border-radius:999px;border:1.5px solid var(--line);background:var(--panel);color:var(--ink);cursor:pointer}
+.verdict button[aria-pressed="true"]{border-color:var(--accent);background:var(--accent-soft);color:var(--accent)}
+.verdict button:disabled{opacity:.5;cursor:default}
+textarea{width:100%;min-height:120px;resize:vertical;font:inherit;font-size:15px;line-height:22px;padding:10px 12px;border-radius:10px;border:1.5px solid var(--line);background:var(--panel);color:var(--ink)}
+textarea:focus{border-color:var(--accent);outline:none}
+.saved{font-size:12px;line-height:16px;color:var(--muted);min-height:16px}
+
+/* варианты */
+.vars{display:grid;gap:20px}
+.var{background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:20px;display:grid;grid-template-columns:minmax(0,1fr);gap:20px;align-items:start}
+.side{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px!important}
+@media (min-width:1640px){.var{grid-template-columns:auto minmax(340px,1fr)}.side{grid-template-columns:1fr}}
+@media (max-width:820px){.side{grid-template-columns:1fr}}
+.stage{background:var(--page);border-radius:14px;padding:20px;display:flex;flex-wrap:wrap;gap:16px;align-items:flex-start;min-width:0;overflow-x:auto}
+.var-h{display:flex;gap:10px;align-items:baseline;flex-wrap:wrap}
+.vid{font-weight:700;color:var(--accent);font-size:14px}
+.side{display:grid;gap:14px;min-width:0}
+.why{display:grid;gap:8px;font-size:14px;line-height:20px}
+.why ul{margin:0;padding-left:18px;display:grid;gap:4px}
+.why h4{margin:0;font-size:12px;line-height:16px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted)}
+.rec{border-left:3px solid var(--accent);padding-left:10px;font-size:14px;line-height:20px}
+
+/* ===== карточка TGCast ===== */
+.tc{width:344px;max-width:100%;background:var(--c-bg);border:1px solid var(--c-border);border-radius:16px;color:var(--c-text);display:flex;flex-direction:column;overflow:hidden;position:relative;cursor:pointer;transition:box-shadow .15s}
+.tc:hover{box-shadow:0 6px 16px rgba(37,38,39,.08),inset 0 0 0 1px var(--c-border)}
+.tc.w268{width:268px} .tc.wide{width:100%;max-width:1080px}
+.tc-top{display:flex;flex-direction:column;gap:8px;padding:20px}
+.tc-id{display:flex;gap:12px;align-items:flex-start}
+.ava{position:relative;flex:none;width:40px;height:40px}
+.ava img{width:40px;height:40px;border-radius:50%;display:block;object-fit:cover}
+.ava .vf{position:absolute;right:-2px;bottom:-2px;width:14px;height:14px;border-radius:50%;background:var(--c-bg);display:grid;place-items:center}
+.ava .vf svg{width:12px;height:12px;color:var(--c-verified)}
+.nm{flex:1;min-width:0;display:grid}
+.nm-t{font-size:14px;line-height:20px;font-weight:600;white-space:nowrap;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,#000 calc(100% - 20px),transparent);mask-image:linear-gradient(90deg,#000 calc(100% - 20px),transparent)}
+.nm-t.fit{-webkit-mask-image:none;mask-image:none}
+.un{display:flex;align-items:center;gap:4px;min-width:0;font-size:12px;line-height:20px;font-weight:600;color:var(--c-sec)}
+.un-t{white-space:nowrap;overflow:hidden;min-width:0;-webkit-mask-image:linear-gradient(90deg,#000 calc(100% - 18px),transparent);mask-image:linear-gradient(90deg,#000 calc(100% - 18px),transparent)}
+.un-t.fit{-webkit-mask-image:none;mask-image:none}
+.more{flex:none;color:var(--c-sec);padding:0 4px;border-radius:8px}
+.more:hover{color:var(--c-text)}
+.acts{display:flex;gap:2px;flex:none}
+.ib{width:36px;height:36px;display:grid;place-items:center;border-radius:8px;color:var(--c-ic);background:transparent;border:0;cursor:pointer}
+.ib:hover{background:var(--c-hover)}
+.ib svg{width:24px;height:24px}
+.cats{display:flex;gap:4px;flex-wrap:wrap}
+.cb{display:inline-flex;align-items:center;height:20px;padding:0 6px;border-radius:8px;background:var(--c-badge);color:var(--c-sec);font-size:12px;line-height:20px;font-weight:600;white-space:nowrap}
+.about{font-size:16px;line-height:20px;color:var(--c-sec);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;height:40px}
+.mt{border-top:1px solid var(--c-border);display:flex;margin-top:auto}
+.lab{display:flex;align-items:center;gap:4px;font-size:12px;line-height:20px;font-weight:600;color:var(--c-sec);white-space:nowrap}
+.lab svg{width:16px;height:16px;flex:none}
+.big{font-size:36px;line-height:44px;font-weight:600;letter-spacing:-.01em;white-space:nowrap}
+.mid{font-size:16px;line-height:20px;font-weight:600;white-space:nowrap}
+.gr{display:inline-flex;align-items:center;gap:2px;font-size:12px;line-height:20px;font-weight:600;white-space:nowrap;font-variant-numeric:tabular-nums}
+.gr svg{width:16px;height:16px;color:var(--c-up)}
+.gr.dn svg{color:var(--c-down)}
+.nd{color:var(--c-sec);font-weight:600}
+.num{font-variant-numeric:tabular-nums}
+.vline{width:1px;background:var(--c-border);align-self:stretch;flex:none}
+.hline{height:1px;background:var(--c-border)}
+.cell{display:flex;align-items:center;gap:6px;padding:10px 8px 10px 16px}
+.kv{display:flex;flex-direction:column;gap:0;padding:8px 8px 10px 16px;min-width:0}
+.tabs{display:flex;gap:4px;background:var(--c-tabs);padding:4px;border-radius:12px;margin:0 16px}
+.tabs button{flex:1;font:inherit;font-size:12px;line-height:20px;font-weight:600;color:var(--c-sec);background:transparent;border:0;border-radius:8px;padding:4px 6px;cursor:pointer;white-space:nowrap}
+.tabs button[aria-selected="true"]{background:var(--c-tab-on);color:var(--c-text);box-shadow:0 1px 2px rgba(0,0,0,.06)}
+.spark{display:block;width:100%;height:44px}
+.chips{display:flex;flex-wrap:wrap;gap:6px;padding:0 16px 16px}
+.chip{display:inline-flex;align-items:center;gap:4px;height:28px;padding:0 10px;border-radius:8px;background:var(--c-badge);font-size:12px;line-height:20px;font-weight:600;white-space:nowrap}
+.chip b{font-weight:700}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--c-border);margin-top:auto}
+.grid3>div{padding:10px 12px;display:flex;flex-direction:column;border-right:1px solid var(--c-border);border-bottom:1px solid var(--c-border);min-width:0}
+.grid3>div:nth-child(3n){border-right:0} .grid3>div:nth-last-child(-n+3){border-bottom:0}
+.kvlist{display:grid;grid-template-columns:auto 1fr;gap:2px 12px;padding:10px 16px 14px;font-size:13px;line-height:20px}
+.kvlist dt{color:var(--c-sec);font-weight:600} .kvlist dd{margin:0;text-align:right;font-weight:600}
+.exp{border:0;background:transparent;font:inherit;font-size:12px;line-height:20px;font-weight:700;color:var(--c-verified);padding:8px 16px 12px;text-align:left;cursor:pointer;display:flex;align-items:center;gap:4px}
+.exp svg{width:16px;height:16px;transition:transform .15s}
+.exp[aria-expanded="true"] svg{transform:rotate(180deg)}
+.row{display:grid;grid-template-columns:minmax(220px,1.6fr) repeat(5,minmax(84px,1fr)) auto;align-items:center;gap:0;padding:12px 16px}
+.row .rc{padding:0 12px;border-left:1px solid var(--c-border);display:flex;flex-direction:column;min-width:0}
+.swap{position:relative;height:40px}
+.swap>*{position:absolute;inset:0;transition:opacity .15s}
+.swap .s2{opacity:0;display:flex;gap:16px;align-items:center}
+.tc:hover .swap .s1,.tc:focus-within .swap .s1{opacity:0}
+.tc:hover .swap .s2,.tc:focus-within .swap .s2{opacity:1}
+@media (hover:none){.swap .s1{opacity:0}.swap .s2{opacity:1}}
+.mini{display:flex;flex-direction:column} .mini .mid{font-size:14px}
+
+/* тултип */
+[data-tip]{position:relative}
+[data-tip]:hover::after,[data-tip]:focus-visible::after{content:attr(data-tip);position:absolute;left:50%;bottom:calc(100% + 6px);transform:translateX(-50%);z-index:20;background:var(--ink);color:var(--page);font-size:12px;line-height:16px;font-weight:600;padding:6px 8px;border-radius:8px;white-space:pre;pointer-events:none;letter-spacing:0;text-transform:none}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+
+<div class="wrap" lang="ru">
+  <header class="lead">
+    <h1>Карточка канала — 10 компоновок</h1>
+    <p class="muted">Сейчас карточка каталога не показывает ER и AR, а таблица показывает. Ниже 10 способов уместить все данные канала. В каждом варианте три карточки из демобазы, как ряд каталога: Cat Club (три юзернейма), «Автоподбор без прикрас» (длинное название, ER нет в данных) и «На позитиве · пилатес» (один юзернейм). Ширина карточек — как в каталоге при трёх в ряд на 1440.</p>
+    <div class="facts">
+      <span class="fact"><b>Данные:</b> база «TGCast: эталонные демоданные»</span>
+      <span class="fact"><b>Из базы нет:</b> AR и прирост по дням — вписал Claude, на проверке у ChatGPT</span>
+      <span class="fact"><b>Уже учтено:</b> «+N» у юзернейма без подложки, категории — бейджем, тултипы на обрезанном и на сокращённых числах</span>
+    </div>
+    <nav class="nav" aria-label="Разделы"><a href="#refs">Референсы · 14</a><a href="#vars">Варианты · 10</a></nav>
+    <p class="small muted" id="store-state">Комментарии сохраняются автоматически, Claude их прочитает.</p>
+  </header>
+
+  <section class="block" id="refs">
+    <div class="sec-h"><h2>Референсы</h2><span class="small muted">Screen Gallery → Mobbin → веб. Отметь, что берём, и напиши, что зацепило.</span></div>
+    <div class="refs" id="ref-list"></div>
+  </section>
+
+  <section class="block" id="vars">
+    <div class="sec-h"><h2>Варианты</h2><span class="small muted">Наведи на числа и обрезанные названия — там тултипы. В вариантах 03, 08 и 10 карточки интерактивные.</span></div>
+    <div class="vars" id="var-list"></div>
+  </section>
+</div>
+
+<script>
+const REFS=[{"id": "R01", "title": "VK Видео · Аналитика канала (вкладка «Обзор»)", "source": "SCRN", "link": "https://scrn.gallery/app/vk-video?screen=69f081e8a75232cda67365ed", "platform": "mobile", "img": "01-vk-video-channel-analytics.jpg", "img_remote": "https://scrn.gallery/cdn/69f081e7ac64cd313dd3f264.jpg", "pattern": "Сегментные табы «Обзор / Аудитория / Взаимодействие» над сеткой метрик в 2 колонки (число крупно, подпись мелко, иконка «i» у неочевидных метрик); ниже график по выбранной метрике.", "take": ["Табы-сегменты внутри карточки для групп метрик: «Охват» (охват, ERR) / «Вовлечённость» (ER) / «Реклама» (AR)", "Сетка 2×N «значение над подписью» с иконкой-тултипом у ERR/ER/AR"], "avoid": ["Крупный график под табами: для карточки каталога слишком тяжело"], "fits_variant": "табы"}, {"id": "R02", "title": "Тинькофф Инвестиции · Скринеры (готовые)", "source": "SCRN", "link": "https://scrn.gallery/app/t-investments?screen=68b16a9aa2bf263e4d1dabe8", "platform": "mobile", "img": "02-t-invest-screeners-chips.jpg", "img_remote": "https://scrn.gallery/cdn/68b16a9aa2bf263e4d1dabe3.jpg", "pattern": "Карточка-плитка: заголовок, под ним 1–2 чипа-тега и чип-счётчик «+N», раскрывающий остальные.", "take": ["Паттерн «1 категория + чип +N» для категорий и доп. юзернеймов", "Одинаковая высота чипов-тегов и чипа «+N»"], "avoid": ["Тёмная тема и большие отступы: в каталоге на десктопе съедят плотность"], "fits_variant": "теги 1+N"}, {"id": "R03", "title": "Тинькофф Инвестиции · Карточка бумаги, вкладка «Показатели»", "source": "SCRN", "link": "https://scrn.gallery/app/t-investments?screen=68b16dd3a2bf263e4d1dbae3", "platform": "mobile", "img": "03-t-invest-indicators-tabs.jpg", "img_remote": "https://scrn.gallery/cdn/68b16dd0a2bf263e4d1dbace.jpg", "pattern": "Табы в шапке сущности (Обзор / Стакан / Пульс / Показатели), внутри метрики сгруппированы секциями; каждая строка: аббревиатура + расшифровка мелко слева, значение справа.", "take": ["Строка «ERR / расшифровка серым ... значение» для мобильной версии карточки", "Группировка метрик секциями с заголовком"], "avoid": ["Плашка «обновляются с задержкой» в каждой карточке: вынести на уровень страницы"], "fits_variant": "строка"}, {"id": "R04", "title": "Contra · Discover, карточки людей", "source": "Mobbin", "link": "https://mobbin.com/screens/f6b614a8-687d-4bf8-83f0-19632f403550", "platform": "desktop", "img": "04-contra-discover-stat-row.jpg", "img_remote": "https://mobbin.com/api/mcp/short/x6yxVzjx", "pattern": "Широкая карточка-строка: аватар + имя + бейдж, сразу под именем строка из 4 мини-метрик (значение над подписью), справа CTA «Follow» / «Get in touch», ниже превью работ.", "take": ["Ряд из 4–5 инлайн-метрик под названием канала (подписчики, охват, ERR, ER, AR) без отдельных плиток", "CTA-группа справа в шапке карточки: место для «в избранное» и «сравнить»"], "avoid": ["Полоса превью-изображений: для канала заменить описанием или спарклайном"], "fits_variant": "строка"}, {"id": "R05", "title": "Kraken · Explore, карточки активов со спарклайном", "source": "Mobbin", "link": "https://mobbin.com/screens/627493f8-3b8e-4191-84e2-18c3c74eb635", "platform": "desktop", "img": "05-kraken-sparkline-cards.jpg", "img_remote": "https://mobbin.com/api/mcp/short/dSTrwJJo", "pattern": "Компактная плитка: лого + название + тикер, спарклайн на всю ширину, внизу % изменения (цветом и стрелкой) над главным значением, звёздочка «в избранное» в углу.", "take": ["Спарклайн подписчиков за 7 дней на всю ширину карточки + прирост со стрелкой и цветом", "Иконка избранного в правом нижнем углу, рядом с главным числом"], "avoid": ["Только 1 метрика на карточке: для медиабайера мало, нужен второй ряд с ERR/ER/AR"], "fits_variant": "спарклайн"}, {"id": "R06", "title": "Whop · Discover Content Rewards, карточки кампаний", "source": "Mobbin", "link": "https://mobbin.com/screens/e4ea251b-f54c-47e3-882e-e41eae93c202", "platform": "desktop", "img": "06-whop-campaign-cards.jpg", "img_remote": "https://mobbin.com/api/mcp/short/CRjzPLZl", "pattern": "Карточка-обложка; в футере: автор с аватаром и иконками платформ, название, строка мини-метрик-чипов (бюджет, участники, ставка) и прогресс-бар.", "take": ["Метрики как компактные чипы с иконкой в одну строку в футере карточки", "Выделение одной ключевой метрики цветным чипом (у нас AR)"], "avoid": ["Большая обложка-картинка: у канала её нет, место уйдёт впустую"], "fits_variant": "сетка метрик"}, {"id": "R07", "title": "GetYourGuide · Featured contributors", "source": "Mobbin", "link": "https://mobbin.com/screens/21670908-2287-40f4-9661-5934f6c91cd0", "platform": "desktop", "img": "07-getyourguide-contributors.jpg", "img_remote": "https://mobbin.com/api/mcp/short/XASDtQ7d", "pattern": "Вертикальная карточка: аватар + имя + бейдж «Verified» строкой ниже, блок тегов-чипов, описание с обрезкой на 3 строки, ссылка «View profile».", "take": ["Шапка «аватар + название + галочка верификации» и теги-категории под ней", "Описание с обрезкой по строкам (line-clamp) фиксированной высоты, чтобы карточки в сетке не прыгали"], "avoid": ["Вообще нет метрик: брать только верхнюю часть"], "fits_variant": "шапка сущности"}, {"id": "R08", "title": "Hootsuite · Listening, Quick Search Results", "source": "Mobbin", "link": "https://mobbin.com/screens/30c810f7-a54e-4e87-9efc-6b6f74fe58af", "platform": "desktop", "img": "08-hootsuite-results-metrics.jpg", "img_remote": "https://mobbin.com/api/mcp/short/daxbYFVM", "pattern": "Строка-карточка из двух зон: слева автор и контент, справа отдельная колонка «Metrics»: 3 главные метрики с иконками в ряд, под ними плотный текстовый список вторичных метрик.", "take": ["Разделение «главные 3 метрики крупно + вторичные мелким списком» внутри одной карточки", "Правая колонка метрик фиксированной ширины в строковой раскладке каталога"], "avoid": ["Плотный абзац вторичных метрик через запятую: нечитаемо, лучше key-value"], "fits_variant": "строка"}, {"id": "R09", "title": "SoundCloud · Insights, Fans", "source": "Mobbin", "link": "https://mobbin.com/screens/2c4d6561-336f-4dc6-bc61-1f199d8a22cf", "platform": "desktop", "img": "09-soundcloud-fans-cards.jpg", "img_remote": "https://mobbin.com/api/mcp/short/bwn7XCM7", "pattern": "Карточка: аватар + имя + страна, две кнопки действия, ниже строки метрик с мини-баром и качественной оценкой (LOW / MID) вместо голого числа.", "take": ["Мини-бар + оценка уровня (низкий/средний/высокий) для ERR/ER/AR относительно медианы категории", "Две равные кнопки действия в карточке («в избранное» / «сравнить»)"], "avoid": ["Капс-подписи мелким шрифтом на тёмном фоне: низкая читаемость"], "fits_variant": "бенчмарк-бары"}, {"id": "R10", "title": "Juicebox · PeopleGPT, список профилей + боковая панель", "source": "Mobbin", "link": "https://mobbin.com/screens/aa42b06b-5e19-41bb-a43b-cfb38752deed", "platform": "desktop", "img": "10-juicebox-list-sidepanel.jpg", "img_remote": "https://mobbin.com/api/mcp/short/Jic6nnUa", "pattern": "Компактные строки-карточки в списке; клик открывает правую панель с табами (Overview / Experience / Education...) и плитками метрик, список остаётся видимым.", "take": ["Карточка остаётся короткой, а полный набор метрик открывается в боковой панели с табами", "Чекбокс в строке для массового действия («сравнить выбранные»)"], "avoid": ["Панель на 40% ширины на узком десктопе: каталог сжимается до нечитаемого"], "fits_variant": "раскрытие"}, {"id": "R11", "title": "Origin · Invest, Holding details", "source": "Mobbin", "link": "https://mobbin.com/screens/62d171c2-64f5-434b-baa9-8926010a44b4", "platform": "desktop", "img": "11-origin-holding-tabs.jpg", "img_remote": "https://mobbin.com/api/mcp/short/IYeOx80d", "pattern": "Табы страницы (Overview / Holdings / Market watch); карточка сущности: лого, название, сектор справа, крупное значение + % изменения, график; ниже горизонтальная полоса «NVDA stats» из 9 метрик в одну строку.", "take": ["Горизонтальная полоса метрик «подпись над значением» на всю ширину, если карточка широкая", "Крупное главное число + изменение в % рядом, мелким цветным"], "avoid": ["Полноразмерный график с периодами: это уровень страницы канала, не каталога"], "fits_variant": "акцент на одной метрике"}, {"id": "R12", "title": "YouTube · Analytics канала (iOS)", "source": "Mobbin", "link": "https://mobbin.com/screens/211b9d9f-846e-49d1-b258-07d0dfcb4998", "platform": "mobile", "img": "12-youtube-analytics-ios.jpg", "img_remote": "https://mobbin.com/api/mcp/short/C7UGVPMQ", "pattern": "Аватар + крупное число подписчиков; ряд из 4 метрик с иконками через разделители; блок «Recent views» со значением и подписью «Last 7 days» слева и мини-баром по дням справа.", "take": ["Мобильная шапка карточки: аватар + подписчики крупно", "Блок «прирост за 7 дней»: число слева, мини-бар-чарт по дням справа", "Ряд метрик с иконками и вертикальными разделителями"], "avoid": ["Иконки без подписей для ERR/ER/AR: аббревиатуры требуют текста или тултипа"], "fits_variant": "спарклайн"}, {"id": "R13", "title": "Whatnot · Профиль продавца (iOS)", "source": "Mobbin", "link": "https://mobbin.com/screens/6794dbfe-2b88-489c-93e7-5b4d303b3f28", "platform": "mobile", "img": "13-whatnot-profile-tiles.jpg", "img_remote": "https://mobbin.com/api/mcp/short/2DHt8aco", "pattern": "Три равные плитки-метрики с иконкой (рейтинг, время отгрузки, продано), под ними подписчики строкой, описание с «Show more», крупная CTA и две вторичные кнопки.", "take": ["3 плитки в ряд для мобильной карточки: охват / ERR / AR", "Описание с «Показать ещё» вместо полного текста"], "avoid": ["Крупная жёлтая CTA на всю ширину: в каталоге действия должны быть вторичными"], "fits_variant": "сетка метрик"}, {"id": "R14", "title": "Upfluence · Боковая панель инфлюенсера (справка)", "source": "Web", "link": "https://help.upfluence.co/en/articles/5361498-influencer-side-panel-data", "platform": "desktop", "img": null, "img_remote": null, "pattern": "Боковая панель карточки инфлюенсера с табами Channels / Brand safety / Email / Notes / Profile; во вкладке Channels: базовая информация с тегами-категориями, аудитория (доля реальных пользователей с цветовым уровнем доверия) и ключевые метрики: подписчики, ER, цена, CPE, сравнение с похожими.", "take": ["Таб-группы прямого аналога (B2B-платформа для инфлюенсер-маркетинга): «Метрики» отдельно от «Аудитории» и «Безопасности»", "Сравнение метрики с похожими каналами как подсказка рядом с ER/AR"], "avoid": ["CRM-вкладки (Email, Notes) в карточке каталога: это другой сценарий"], "fits_variant": "табы"}];
+const I={
+ book:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"><path d="M6.5 4.5h11v15.2l-5.5-3.7-5.5 3.7z"/></svg>',
+ vs:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3.5" y="3.5" width="17" height="17" rx="3"/><path d="M7 9l2 6 2-6M16.6 9.4c-.4-.4-1-.6-1.6-.6-1 0-1.7.6-1.7 1.4 0 1.9 3.4 1 3.4 3 0 .8-.8 1.5-1.8 1.5-.7 0-1.3-.3-1.7-.7" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+ users:'<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"><circle cx="6.2" cy="5.2" r="2.4"/><path d="M1.8 13c.4-2.3 2.2-3.6 4.4-3.6s4 1.3 4.4 3.6"/><path d="M10.4 3.1a2.3 2.3 0 0 1 0 4.3M11.7 9.6c1.3.4 2.3 1.6 2.5 3.4"/></svg>',
+ eye:'<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M1.5 8s2.4-4.5 6.5-4.5S14.5 8 14.5 8 12.1 12.5 8 12.5 1.5 8 1.5 8z"/><circle cx="8" cy="8" r="2"/></svg>',
+ up:'<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M5 11l6-6M6 5h5v5"/></svg>',
+ ok:'<svg viewBox="0 0 12 12"><circle cx="6" cy="6" r="6" fill="currentColor"/><path d="M3.4 6.2l1.8 1.7 3.4-3.6" fill="none" stroke="#fff" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+ chev:'<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M4 6l4 4 4-4"/></svg>',
+ info:'<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="8" cy="8" r="6"/><path d="M8 7.3v3.6M8 5.2v.1" stroke-linecap="round"/></svg>'
+};
+// Демобаза: «TGCast: эталонные демоданные». ar и g7d (прирост по дням) — дописаны Claude, на проверке ChatGPT.
+const CH=[
+ {name:"Cat Club",user:"catclub",more:["catclub_daily","cat_club_ru"],vf:true,ava:"av/cat-club.jpg",cats:["Домашние животные","Лайфстайл"],about:"Котики, уход и юмор про жизнь с питомцами. Подборки приютов и полезные советы от ветеринаров.",subs:241384,g7:4285,reach:107316,err:6.1,er:18.4,ar:3.8,days:[520,610,580,640,590,700,645]},
+ {name:"Автоподбор без прикрас",user:"autopodbor_bez_prikras",more:["autopodbor_chat","autopodbor_msk"],vf:false,ava:"av/autopodbor.jpg",cats:["Автомобили и транспорт"],about:"Автоподбор: проверяем машины перед покупкой и показываем, что скрывают продавцы.",subs:1204783,g7:3305,reach:145283,err:5.8,er:null,ar:5.6,days:[410,520,380,560,470,505,460]},
+ {name:"На позитиве · пилатес",user:"positive_pilates",more:[],vf:true,ava:"av/positive-pilates.jpg",cats:["Фитнес и ЗОЖ","Лайфстайл"],about:"Пилатес дома: короткие тренировки, техника и мотивация.",subs:104276,g7:1382,reach:48263,err:4.3,er:5.9,ar:2.9,days:[180,205,190,214,176,220,197]}
+];
+const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const full=n=>Number(n).toLocaleString("ru-RU");
+const cmp=n=>n>=1e6?(n/1e6).toFixed(1).replace(".",",").replace(",0","")+"M":n>=1e3?(n/1e3).toFixed(1).replace(".",",")+"K":String(n);
+const pct=v=>v==null?null:v.toFixed(1).replace(".",",")+"%";
+const DEF={err:"ERR — средний охват поста к числу подписчиков",er:"ER — вовлечённость: реакции, комментарии и репосты к охвату",ar:"AR — индекс рекламы",reach:"Средний охват поста"};
+const val=(c,k)=>k==="er"&&c.er==null?`<span class="nd" data-tip="Нет данных: у канала скрыты реакции">—</span>`:`<span class="num">${pct(c[k])}</span>`;
+const grow=c=>`<span class="gr" data-tip="Прирост за 7 дней: +${full(c.g7)}">${I.up}<span>${full(c.g7)}</span></span>`;
+const head=(c,o={})=>`<div class="tc-id"><span class="ava"><img src="${c.ava}" alt="" width="40" height="40">${c.vf?`<span class="vf" data-tip="Канал верифицирован в Telegram">${I.ok}</span>`:""}</span>
+  <div class="nm"><span class="nm-t" data-fit data-tip="${esc(c.name)}">${esc(c.name)}</span>
+  <span class="un"><span class="un-t" data-fit data-tip="@${esc(c.user)}">@${esc(c.user)}</span>${c.more.length?`<span class="more" data-tip="${c.more.map(u=>"@"+u).join("\n")}" tabindex="0">+${c.more.length}</span>`:""}</span></div>
+  ${o.noActs?"":`<span class="acts"><button class="ib" type="button" aria-label="Добавить в избранное" data-tip="В избранное">${I.book}</button><button class="ib" type="button" aria-label="Сравнить" data-tip="Сравнить">${I.vs}</button></span>`}</div>`;
+const cats=c=>`<div class="cats"><span class="cb">${esc(c.cats[0])}</span>${c.cats.length>1?`<span class="cb" data-tip="${esc(c.cats.slice(1).join("\n"))}" tabindex="0">+${c.cats.length-1}</span>`:""}</div>`;
+const about=c=>`<p class="about">${esc(c.about)}</p>`;
+const subsBig=c=>`<div class="kv" style="flex:1"><span class="lab">${I.users}Подписчики</span><span style="display:flex;align-items:center;gap:8px"><span class="big num" data-tip="${full(c.subs)} подписчиков">${cmp(c.subs)}</span>${grow(c)}</span></div>`;
+const lab=(k,t)=>`<span class="lab" data-tip="${DEF[k]||""}">${t}</span>`;
+function spark(c){const d=c.days,mx=Math.max(...d),mn=Math.min(...d)*.85,W=300,H=44,pts=d.map((v,i)=>[i*(W/(d.length-1)),H-4-(v-mn)/(mx-mn)*(H-10)]);
+ const line=pts.map((p,i)=>(i?"L":"M")+p[0].toFixed(1)+" "+p[1].toFixed(1)).join(" ");
+ return `<svg class="spark" viewBox="0 0 ${W} ${H}" preserveAspectRatio="none" role="img" aria-label="Прирост подписчиков по дням за 7 дней"><path d="${line} L${W} ${H} L0 ${H}Z" fill="var(--c-verified)" fill-opacity=".10"/><path d="${line}" fill="none" stroke="var(--c-verified)" stroke-width="2" vector-effect="non-scaling-stroke"/><circle cx="${pts[6][0]-3}" cy="${pts[6][1]}" r="3" fill="var(--c-verified)"/></svg>`;}
+
+const V=[
+{id:"v01",t:"База + 2×2 справа",refs:"текущая карточка",
+ card:c=>`<article class="tc">${'<div class="tc-top">'+head(c)+cats(c)+about(c)+'</div>'}<div class="mt">${subsBig(c)}<div class="vline"></div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;width:150px">${[["reach",I.eye,`<span class="mid num" data-tip="${DEF.reach}: ${full(c.reach)}">${cmp(c.reach)}</span>`],["err","ERR",val(c,"err")],["er","ER",val(c,"er")],["ar","AR",val(c,"ar")]].map(([k,l,v],i)=>`<div style="padding:8px 6px 8px 10px;display:flex;flex-direction:column;${i%2?"":"border-right:1px solid var(--c-border);"}${i<2?"border-bottom:1px solid var(--c-border);":""}">${k==="reach"?`<span class="lab">${l}</span>`:lab(k,l)}<span class="mid" style="font-size:14px">${v}</span></div>`).join("")}</div></div></article>`,
+ plus:["Минимум изменений: верх карточки и главное число на месте","Все 5 метрик видны сразу, без кликов"],
+ minus:["Правая колонка 150 px: подписи и числа на грани, при «100,0%» тесно","Четыре клетки по 14 px рядом с числом 36 px — заметно мельче, иерархия ломается"],
+ mob:"На 358 px ширины та же раскладка помещается, но клетки по 75 px — предел.",
+ rec:""},
+{id:"v02",t:"Полоса метрик под главным числом",refs:"R11 Origin, R04 Contra",
+ card:c=>`<article class="tc"><div class="tc-top">${head(c)+cats(c)+about(c)}</div><div class="mt" style="flex-direction:column">${subsBig(c)}<div class="hline"></div>
+  <div style="display:grid;grid-template-columns:repeat(4,1fr)">${[["reach","Охват",`<span class="num" data-tip="${DEF.reach}: ${full(c.reach)}">${cmp(c.reach)}</span>`],["err","ERR",val(c,"err")],["er","ER",val(c,"er")],["ar","AR",val(c,"ar")]].map(([k,l,v],i)=>`<div style="padding:8px 8px 10px ${i?12:16}px;${i?"border-left:1px solid var(--c-border)":""};display:flex;flex-direction:column">${lab(k,l)}<span class="mid">${v}</span></div>`).join("")}</div></div></article>`,
+ plus:["Все метрики одного размера в одной строке — легко сравнивать карточки по вертикали","Подписчики остаются героем, как сейчас","Порядок метрик совпадает с колонками таблицы"],
+ minus:["Карточка выше примерно на 56 px — на экране 1440 помещается на ряд меньше"],
+ mob:"На 358 px четыре клетки по ~88 px — помещается.",
+ rec:"Рекомендую как базу: показывает всё, ничего не прячет, повторяет таблицу."},
+{id:"v03",t:"Табы внутри карточки",refs:"R01 VK Видео, R14 Upfluence",
+ card:(c,i)=>`<article class="tc" data-tabs><div class="tc-top">${head(c)+cats(c)+about(c)}</div><div class="mt" style="flex-direction:column;padding-top:12px">
+  <div class="tabs" role="tablist" aria-label="Группа метрик">${["Аудитория","Вовлечённость","Реклама"].map((t,j)=>`<button type="button" role="tab" aria-selected="${j===0}" data-tab="${j}">${t}</button>`).join("")}</div>
+  <div data-pane="0" style="display:flex">${subsBig(c)}<div class="vline"></div><div class="kv" style="width:120px"><span class="lab">${I.eye}Охват</span><span class="mid num" data-tip="${DEF.reach}: ${full(c.reach)}">${cmp(c.reach)}</span></div></div>
+  <div data-pane="1" hidden style="display:flex"><div class="kv" style="flex:1">${lab("err","ERR")}<span class="big">${val(c,"err")}</span></div><div class="vline"></div><div class="kv" style="flex:1">${lab("er","ER")}<span class="big">${val(c,"er")}</span></div></div>
+  <div data-pane="2" hidden style="display:flex"><div class="kv" style="flex:1">${lab("ar","AR · индекс рекламы")}<span class="big">${val(c,"ar")}</span></div></div></div></article>`,
+ plus:["Карточка не растёт, число в каждой группе крупное","Таб переключается во всех карточках сразу — сравнение по вертикали сохраняется"],
+ minus:["Клик ради цифры: медиабайер в каталоге сканирует, а не исследует","Если таб переключается в одной карточке, сравнение разваливается, поэтому синхронизация обязательна, а тогда это фильтр уровня каталога, а не карточки"],
+ mob:"На мобильном табы в карточке — мелкие цели 28 px, нужно 48. Лучше переключатель над списком.",
+ rec:"Против табов внутри карточки. Если нравится идея групп, сделаем переключатель «Аудитория / Вовлечённость / Реклама» над каталогом."},
+{id:"v04",t:"Спарклайн прироста + чипы метрик",refs:"R05 Kraken, R12 YouTube",
+ card:c=>`<article class="tc"><div class="tc-top">${head(c)+cats(c)}</div><div class="mt" style="flex-direction:column;border-top:0">
+  <div style="display:flex;align-items:flex-end;justify-content:space-between;padding:0 16px"><div class="kv" style="padding:0">${`<span class="lab">${I.users}Подписчики</span><span class="big num" data-tip="${full(c.subs)} подписчиков">${cmp(c.subs)}</span>`}</div><div style="text-align:right;padding-bottom:6px">${grow(c)}<div class="lab" style="justify-content:flex-end">за 7 дней</div></div></div>
+  <div style="padding:4px 16px 8px">${spark(c)}</div>
+  <div class="chips"><span class="chip" data-tip="${DEF.reach}: ${full(c.reach)}">${I.eye}<b>${cmp(c.reach)}</b></span><span class="chip" data-tip="${DEF.err}">ERR <b>${pct(c.err)}</b></span><span class="chip" data-tip="${DEF.er}">ER <b>${c.er==null?"—":pct(c.er)}</b></span><span class="chip" data-tip="${DEF.ar}">AR <b>${pct(c.ar)}</b></span></div></div></article>`,
+ plus:["Динамика видна без открытия канала — сильный аргумент «канал живой»","Чипы компактные и одного размера"],
+ minus:["Нужен ряд прироста по дням в API каталога — сейчас есть только сумма за 7 дней","Описание канала убрано — его придётся показывать тултипом или в шапке канала"],
+ mob:"На мобильном график хорошо читается, чипы переносятся во вторую строку.",
+ rec:""},
+{id:"v05",t:"Плитки 3×2",refs:"R13 Whatnot, R06 Whop",
+ card:c=>`<article class="tc"><div class="tc-top">${head(c)+cats(c)+about(c)}</div><div class="grid3">
+  ${[["Подписчики",`<span class="num" data-tip="${full(c.subs)} подписчиков">${cmp(c.subs)}</span>`,"",I.users],["За 7 дней",`<span class="num" data-tip="+${full(c.g7)}" style="color:var(--c-up)">+${cmp(c.g7)}</span>`],["Охват",`<span class="num" data-tip="${DEF.reach}: ${full(c.reach)}">${cmp(c.reach)}</span>`],["ERR",val(c,"err"),"err"],["ER",val(c,"er"),"er"],["AR",val(c,"ar"),"ar"]].map(([l,v,k])=>`<div>${k?lab(k,l):`<span class="lab">${l}</span>`}<span class="mid">${v}</span></div>`).join("")}</div></article>`,
+ plus:["Все шесть показателей равны — честное сравнение","Ровная сетка легко сканируется"],
+ minus:["Пропадает главное число: подписчики больше не выделены, хотя это первый фильтр медиабайера","Карточка выше на ~40 px"],
+ mob:"На мобильном плитки 3×2 по ~118 px — комфортно.",
+ rec:""},
+{id:"v06",t:"Главное крупно + вторичное списком",refs:"R08 Hootsuite, R03 Т-Инвестиции",
+ card:c=>`<article class="tc"><div class="tc-top">${head(c)+cats(c)+about(c)}</div><div class="mt" style="flex-direction:column">
+  <div style="display:flex">${subsBig(c)}<div class="vline"></div><div class="kv" style="width:120px"><span class="lab">${I.eye}Охват</span><span class="mid num" data-tip="${DEF.reach}: ${full(c.reach)}" style="font-size:20px;line-height:28px">${cmp(c.reach)}</span></div></div>
+  <div class="hline"></div><dl class="kvlist" style="grid-template-columns:auto 1fr auto 1fr auto 1fr"><dt data-tip="${DEF.err}">ERR</dt><dd>${val(c,"err")}</dd><dt data-tip="${DEF.er}" style="padding-left:8px">ER</dt><dd>${val(c,"er")}</dd><dt data-tip="${DEF.ar}" style="padding-left:8px">AR</dt><dd>${val(c,"ar")}</dd></dl></div></article>`,
+ plus:["Иерархия как у медиабайера: размер и охват решают, коэффициенты уточняют","Вторая строка низкая — карточка растёт всего на ~36 px"],
+ minus:["ERR, ER и AR мелкие — для тех, кто фильтрует по ER, акцент не тот"],
+ mob:"На мобильном строка коэффициентов помещается в одну линию.",
+ rec:"Хороший компромисс, если для юзеров подписчики и охват важнее коэффициентов. Проверить на интервью."},
+{id:"v07",t:"Плотная: 4 в ряд, описание в тултипе",refs:"R07 GetYourGuide (наоборот)",w:"w268",
+ card:c=>`<article class="tc w268"><div class="tc-top" style="padding:16px 16px 12px">${head(c,{noActs:true}).replace('<div class="nm">','<div class="nm" data-tip="'+esc(c.about)+'">')}${cats(c)}</div>
+  <div class="mt" style="flex-direction:column"><div class="kv">${`<span class="lab">${I.users}Подписчики</span><span style="display:flex;gap:6px;align-items:center"><span class="big num" style="font-size:28px;line-height:36px" data-tip="${full(c.subs)} подписчиков">${cmp(c.subs)}</span>${grow(c)}</span>`}</div><div class="hline"></div>
+  <div style="display:grid;grid-template-columns:repeat(4,1fr)">${[["reach","Охват",`<span class="num" data-tip="${DEF.reach}: ${full(c.reach)}">${cmp(c.reach)}</span>`],["err","ERR",val(c,"err")],["er","ER",val(c,"er")],["ar","AR",val(c,"ar")]].map(([k,l,v],i)=>`<div style="padding:6px 4px 8px ${i?8:16}px;${i?"border-left:1px solid var(--c-border)":""};display:flex;flex-direction:column">${lab(k,l)}<span class="mid" style="font-size:14px">${v}</span></div>`).join("")}</div>
+  <div style="display:flex;gap:2px;padding:4px 8px;border-top:1px solid var(--c-border)"><button class="ib" type="button" aria-label="В избранное">${I.book}</button><button class="ib" type="button" aria-label="Сравнить">${I.vs}</button></div></div></article>`,
+ plus:["На экран помещается на треть больше каналов","Описание не занимает место, но доступно по наведению"],
+ minus:["Описание — то, что помогает понять канал без открытия; спрятанное в тултип почти не читают","Мелкие числа 14 px в узкой колонке"],
+ mob:"На мобильном не применим: там одна карточка в ряд.",
+ rec:""},
+{id:"v08",t:"Раскрытие «Все метрики»",refs:"R10 Juicebox",
+ card:c=>`<article class="tc"><div class="tc-top">${head(c)+cats(c)+about(c)}</div><div class="mt" style="flex-direction:column">${`<div style="display:flex">${subsBig(c)}<div class="vline"></div><div class="kv" style="width:110px"><span class="lab">${I.eye}Охват</span><span class="mid num" data-tip="${DEF.reach}: ${full(c.reach)}">${cmp(c.reach)}</span>${lab("err","ERR")}<span class="mid">${val(c,"err")}</span></div></div>`}
+  <div class="hline"></div><button class="exp" type="button" aria-expanded="false" data-exp>Все метрики ${I.chev}</button>
+  <dl class="kvlist" hidden data-more><dt data-tip="${DEF.er}">ER</dt><dd>${val(c,"er")}</dd><dt data-tip="${DEF.ar}">AR</dt><dd>${val(c,"ar")}</dd><dt>Прирост за 7 дней</dt><dd class="num">+${full(c.g7)}</dd></dl></div></article>`,
+ plus:["В покое карточка почти как сейчас","Полный набор — в один клик, без перехода в канал"],
+ minus:["Раскрытие ломает сетку: соседние карточки в ряду остаются короткими","Тот же минус, что у табов: ER и AR не сравнить, не кликнув в каждую карточку"],
+ mob:"На мобильном раскрытие естественнее — одна колонка, сетка не ломается.",
+ rec:""},
+{id:"v09",t:"Широкая строка — между таблицей и карточкой",refs:"R04 Contra, R08 Hootsuite",w:"wide",single:true,
+ card:c=>`<article class="tc wide"><div class="row"><div style="display:grid;gap:6px;min-width:0">${head(c,{noActs:true})}<div style="padding-left:52px">${cats(c)}</div></div>
+  <div class="rc"><span class="lab">${I.users}Подписчики</span><span class="mid num" style="font-size:20px;line-height:28px" data-tip="${full(c.subs)} подписчиков">${cmp(c.subs)}</span>${grow(c)}</div>
+  <div class="rc"><span class="lab">${I.eye}Охват</span><span class="mid num" data-tip="${DEF.reach}: ${full(c.reach)}">${cmp(c.reach)}</span></div>
+  <div class="rc">${lab("err","ERR")}<span class="mid">${val(c,"err")}</span></div><div class="rc">${lab("er","ER")}<span class="mid">${val(c,"er")}</span></div><div class="rc">${lab("ar","AR")}<span class="mid">${val(c,"ar")}</span></div>
+  <div class="acts" style="padding-left:12px">${'<button class="ib" type="button" aria-label="В избранное">'+I.book+'</button><button class="ib" type="button" aria-label="Сравнить">'+I.vs+'</button>'}</div></div>
+  <p class="about" style="padding:0 16px 14px 68px;height:auto;-webkit-line-clamp:1;font-size:14px">${esc(c.about)}</p></article>`,
+ plus:["Все метрики и описание в одну строку, сравнение по колонкам как в таблице","Можно заменить и таблицу, и карточки одним видом"],
+ minus:["Третий вид каталога — больше поддержки и решений","На планшете колонки не помещаются, нужен перенос"],
+ mob:"На мобильном превращается в вариант 02.",
+ rec:""},
+{id:"v10",t:"Наведение: описание сменяется метриками",refs:"собственная идея, проверить",
+ card:c=>`<article class="tc" tabindex="0"><div class="tc-top">${head(c)+cats(c)}<div class="swap"><p class="about s1">${esc(c.about)}</p>
+  <div class="s2">${[["err","ERR"],["er","ER"],["ar","AR"]].map(([k,l])=>`<span class="mini">${lab(k,l)}<span class="mid">${val(c,k)}</span></span>`).join("")}</div></div></div>
+  <div class="mt">${subsBig(c)}<div class="vline"></div><div class="kv" style="width:120px"><span class="lab">${I.eye}Охват</span><span class="mid num" data-tip="${DEF.reach}: ${full(c.reach)}">${cmp(c.reach)}</span></div></div></article>`,
+ plus:["Карточка не меняет размер","Описание видно в покое, коэффициенты — при наведении"],
+ minus:["Скрытая функция: никто не узнает, что нужно навести","Нельзя видеть описание и ER одновременно"],
+ mob:"На мобильном ховера нет: показываем метрики вместо описания, описание уходит в шапку канала.",
+ rec:""}
+];
+
+let db=null,notes={},canWrite=true;
+const verdicts=[["take","Берём"],["part","Частично"],["no","Не то"]];
+function noteHTML(id,ph){const n=notes[id]||{};return `<div class="note"><div class="verdict" role="group" aria-label="Оценка">${verdicts.map(([k,l])=>`<button type="button" data-v="${k}" data-id="${id}" aria-pressed="${n.verdict===k}" ${canWrite?"":"disabled"}>${l}</button>`).join("")}</div>
+ <label class="small muted" for="ta-${id}">Комментарий Леры</label><textarea id="ta-${id}" data-id="${id}" rows="5" placeholder="${esc(ph)}" ${canWrite?"":"disabled"}>${esc(n.text||"")}</textarea><span class="saved" id="sv-${id}">${n.updatedAt?"Сохранено":""}</span></div>`}
+function renderRefs(){document.getElementById("ref-list").innerHTML=REFS.map(r=>`<article class="ref" id="${r.id}"><div class="ref-img">${r.img?`<a href="${esc(r.link)}" target="_blank" rel="noopener"><img src="refs/${esc(r.img)}" alt="${esc(r.title)}" loading="lazy"></a>`:`<div class="none">Снимок недоступен из среды агента.<br><a href="${esc(r.link)}" target="_blank" rel="noopener">Открыть источник ↗</a></div>`}</div>
+ <div class="ref-b"><div class="meta"><b style="color:var(--accent)">${r.id}</b><span class="pill">${esc(r.source)}</span><span class="pill">${r.platform==="desktop"?"десктоп":"мобильный"}</span><span class="pill acc">${esc(r.fits_variant)}</span></div>
+ <div class="ref-t">${esc(r.title)}</div><p class="small">${esc(r.pattern)}</p>
+ <div class="pm"><div><h4 class="y">Взять</h4><ul>${r.take.map(x=>`<li>${esc(x)}</li>`).join("")}</ul></div><div><h4 class="n">Не брать</h4><ul>${r.avoid.map(x=>`<li>${esc(x)}</li>`).join("")}</ul></div></div>
+ <a class="small" href="${esc(r.link)}" target="_blank" rel="noopener" style="color:var(--accent);font-weight:600">Открыть экран ↗</a>${noteHTML(r.id,"Что зацепило или почему не то")}</div></article>`).join("")}
+function renderVars(){document.getElementById("var-list").innerHTML=V.map((v,ix)=>`<article class="var" id="${v.id}"><div style="display:grid;gap:12px;min-width:0"><div class="var-h"><span class="vid">${String(ix+1).padStart(2,"0")}</span><h3>${esc(v.t)}</h3><span class="small muted">${esc(v.refs)}</span></div>
+ <div class="stage">${(v.single?CH:CH).map((c,i)=>v.card(c,i)).join("")}</div></div>
+ <aside class="side"><div class="why"><h4>Комментарий Claude</h4><div><b class="small">Плюсы</b><ul>${v.plus.map(x=>`<li>${esc(x)}</li>`).join("")}</ul></div><div><b class="small">Минусы</b><ul>${v.minus.map(x=>`<li>${esc(x)}</li>`).join("")}</ul></div><p><b>Мобильный:</b> ${esc(v.mob)}</p>${v.rec?`<p class="rec">${esc(v.rec)}</p>`:""}</div>${noteHTML(v.id,"Что нравится, что поменять, с чем совместить")}</aside></article>`).join("")}
+function fit(){document.querySelectorAll("[data-fit]").forEach(e=>{const over=e.scrollWidth>e.clientWidth+1;e.classList.toggle("fit",!over);if(!over)e.removeAttribute("data-tip");});}
+function renderAll(){const a=document.activeElement,fid=a&&a.tagName==="TEXTAREA"?a.id:null,pos=fid?a.selectionStart:0;renderRefs();renderVars();fit();if(fid){const t=document.getElementById(fid);if(t){t.focus();try{t.selectionStart=t.selectionEnd=pos}catch(_){}}}}
+// интерактив карточек
+document.addEventListener("click",e=>{
+ const tab=e.target.closest("[data-tab]");if(tab){const j=tab.dataset.tab;document.querySelectorAll("[data-tabs]").forEach(card=>{card.querySelectorAll("[data-tab]").forEach(b=>b.setAttribute("aria-selected",b.dataset.tab===j));card.querySelectorAll("[data-pane]").forEach(p=>p.hidden=p.dataset.pane!==j);});return;}
+ const ex=e.target.closest("[data-exp]");if(ex){const on=ex.getAttribute("aria-expanded")!=="true";ex.setAttribute("aria-expanded",on);ex.parentElement.querySelector("[data-more]").hidden=!on;return;}
+ const vb=e.target.closest("[data-v]");if(vb){const id=vb.dataset.id,k=vb.dataset.v,cur=(notes[id]||{}).verdict;save(id,{verdict:cur===k?null:k});document.querySelectorAll(`[data-v][data-id="${id}"]`).forEach(b=>b.setAttribute("aria-pressed",b.dataset.v===k&&cur!==k));}
+});
+const timers={};
+document.addEventListener("input",e=>{const t=e.target;if(t.tagName!=="TEXTAREA")return;const id=t.dataset.id;try{localStorage.setItem("cv-"+id,t.value)}catch(_){}
+ const sv=document.getElementById("sv-"+id);if(sv)sv.textContent="Сохраняю…";clearTimeout(timers[id]);timers[id]=setTimeout(()=>save(id,{text:t.value}),700);});
+async function save(id,patch){notes[id]={...(notes[id]||{}),...patch,updatedAt:new Date().toISOString()};const sv=document.getElementById("sv-"+id);
+ if(!db){if(sv)sv.textContent="Сохранено только в этом браузере";return;}
+ try{await db.doc("notes/"+id).set(notes[id]);if(sv)sv.textContent="Сохранено";}catch(err){if(sv)sv.textContent="Не сохранилось ("+(err&&err.code||"ошибка")+"). Текст остался в поле, попробуй ещё раз";}}
+renderAll();
+(async()=>{try{db=await window.claude?.use?.("db");}catch(_){db=null}
+ const st=document.getElementById("store-state");
+ if(!db){st.textContent="Хранилище недоступно в этом просмотре: комментарии останутся только в этом браузере. Открой страницу в claude.ai.";
+  REFS.concat(V).forEach(x=>{try{const v=localStorage.getItem("cv-"+x.id);if(v)notes[x.id]={...(notes[x.id]||{}),text:v}}catch(_){}});renderAll();return;}
+ try{const user=await window.claude.use("user");const w=user?await user.can("data.write"):null;canWrite=w===null?true:!!w;}catch(_){}
+ if(!canWrite)st.textContent="У тебя доступ только на просмотр: оценки и комментарии видны, но не меняются.";
+ let first=true;db.collection("notes").onSnapshot(q=>{q.docs.forEach(d=>{const a=document.activeElement;const mine=a&&a.dataset&&a.dataset.id===d.id&&a.tagName==="TEXTAREA";const v=d.data();notes[d.id]=mine?{...v,text:notes[d.id]?.text??v.text}:v;});
+  if(first||!(document.activeElement&&document.activeElement.tagName==="TEXTAREA")){renderAll();}first=false;},()=>{st.textContent="Связь с хранилищем потеряна, обнови страницу. Несохранённый текст останется в поле.";});
+})();
+</script>
